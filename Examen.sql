@@ -30,8 +30,8 @@ ALTER TABLE Sindicato ADD CONSTRAINT sindicato_pk PRIMARY KEY (id_sindicato);
 Create Table Aseguradora(
     id_aseguradora  NUMBER(1000) NOT NULL,
     nombre          VARCHAR(254) NOT NULL,
-    rut             NUMBER(1000) NOT NULL,
-    dv              NUMBER(1) NOT NULL,    
+    rut             NUMBER(10) NOT NULL,
+    dv              VARCHAR(1) NOT NULL,    
 );
 
 ALTER TABLE Aseguradora ADD CONSTRAINT aseguradora_pk PRIMARY KEY (id_aseguradora);
@@ -51,7 +51,7 @@ Create Table Afiliado(
     segundo_nombre      VARCHAR(254) NULL,
     apellido_paterno    VARCHAR(254) NOT NULL,
     apellido_materno    VARCHAR(254) NULL,
-    edad                NUMBER(1000)    NOT NULL,
+    edad                NUMBER(1000) NOT NULL,
     tiene_discapacidad  BOOLEAN(1) NOT NULL,
     correo              NVARCHAR(254) NOT NULL,
     curriculum          FILE NOT NULL,
@@ -89,8 +89,8 @@ ALTER TABLE Tipo_de_telefono ADD CONSTRAINT tipo_telefono_pk PRIMARY KEY (id_tip
 
 Create Table Cargas_futuro_afiliado(
     id_carga_futuro_afiliado    NUMBER(1000) NOT NULL,
-    rut                         NVARCHAR(10) NOT NULL,
-    dv                          NUMBER(1) NOT NULL,
+    rut                        NUMBER(10) NOT NULL,
+    dv                          VARCHAR(1) NOT NULL,
     primer_nombre               VARCHAR(254) NOT NULL,
     segundo_nombre              VARCHAR(254) NULL,
     apellido_paterno            VARCHAR(254) NOT NULL,
